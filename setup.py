@@ -1,25 +1,24 @@
 """Setup-module for DistKeras.
 
-This software enables distrubuted Machine Learning on Apache Spark using Keras.
+This software enables distributed Machine Learning on Apache Spark using Keras. Optimized for Qubole.
 
 See:
-https://github.com/JoeriHermans/dist-keras/
-http://joerihermans.com/
+https://github.com/valentinchelle/kerasOnSpark
 """
 
 from setuptools import setup
 from setuptools import find_packages
 
-setup(name='dist-keras',
+setup(name='kerasOnSpark',
       description='Distributed Deep learning with Apache Spark with Keras.',
-      url='https://github.com/JoeriHermans/dist-keras',
-      author='Joeri Hermans',
-      version='0.2.1',
-      author_email='joeri@joerihermans.com',
+      url='https://github.com/valentinchelle/kerasOnSpark',
+      author='Valentin Chelle',
+      version='0.0.1',
+      author_email='valentin.chelle@hotmail.fr',
       license='GPLv3',
       install_requires=['theano', 'tensorflow', 'keras', 'flask'],
-      packages=['distkeras'],
-      package_data={'distkeras': ['distkeras/*.py']},
+      packages=['kerasonspark'],
+      package_data={'kerasonspark': ['kerasonspark/*.py']},
       # Keywords related to the project.
-      keywords=['Keras', 'Deep Learning', 'Machine Learning', 'Theano', 'Tensorflow', 'Distributed', 'Apache Spark'],
+      keywords=['Keras', 'Deep Learning', 'Machine Learning', 'Qubole', 'Tensorflow', 'Distributed', 'Apache Spark'],
 )

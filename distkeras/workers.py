@@ -106,7 +106,7 @@ class Worker(object):
         set_keras_base_directory()
         if K.backend() == 'tensorflow':
             # set GPU option allow_growth to False for GPU-enabled tensorflow
-            config = tf.ConfigProto()
+            config = tf.compat.v1.ConfigProto()
             config.gpu_options.allow_growth = False
             sess = tf.Session(config=config)
             K.set_session(sess)
