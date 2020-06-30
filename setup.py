@@ -1,4 +1,4 @@
-"""Setup-module for DistKeras.
+"""Setup-module for kerasonspark.
 
 This software enables distributed Machine Learning on Apache Spark using Keras. Optimized for Qubole.
 

@@ -6,8 +6,8 @@ Author: Joeri Hermans
 
 ## BEGIN Imports. ##############################################################
 
-from distkeras.job_deployment import Job
-from distkeras.job_deployment import Punchcard
+from kerasonspark.job_deployment import Job
+from kerasonspark.job_deployment import Punchcard
 
 import os
 

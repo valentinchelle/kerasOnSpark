@@ -1,6 +1,6 @@
 # Optimizers
 
-Optimizers, or trainers, are the main component in Distributed Keras (DK). All trainers share a single interface, which is the `Trainer` class, defined in `distkeras/distributed.py`. This class also contains the `serialized model`, the `loss`, and the `Keras optimizer` the workers need to use. Generally, a trainer will run on a single worker. In the context of Apache Spark, this means that the thread which is responsible for doing the foreachPartition or mapPartitions will have been assigned a trainer. In reality however, the training of the model itself will utilise more physical cores. In fact, it will employ all available cores, and thus bypassing resource managers such as YARN.
+Optimizers, or trainers, are the main component in Distributed Keras (DK). All trainers share a single interface, which is the `Trainer` class, defined in `kerasonspark/distributed.py`. This class also contains the `serialized model`, the `loss`, and the `Keras optimizer` the workers need to use. Generally, a trainer will run on a single worker. In the context of Apache Spark, this means that the thread which is responsible for doing the foreachPartition or mapPartitions will have been assigned a trainer. In reality however, the training of the model itself will utilise more physical cores. In fact, it will employ all available cores, and thus bypassing resource managers such as YARN.
 
 ## Single Trainer
 

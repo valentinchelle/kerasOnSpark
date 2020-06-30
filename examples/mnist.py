@@ -9,11 +9,11 @@ on HDFS.
 4. hdfs dfs -copyFromLocal mnist_test.csv data/mnist_test.csv
 """
 
-from distkeras.evaluators import *
-from distkeras.predictors import *
-from distkeras.trainers import *
-from distkeras.transformers import *
-from distkeras.utils import *
+from kerasonspark.evaluators import *
+from kerasonspark.predictors import *
+from kerasonspark.trainers import *
+from kerasonspark.transformers import *
+from kerasonspark.utils import *
 
 from keras.layers.convolutional import *
 from keras.layers.core import *
