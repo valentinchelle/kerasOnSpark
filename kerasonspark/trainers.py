@@ -9,28 +9,28 @@ import threading
 
 import time
 
-from distkeras.parameter_servers import ADAGParameterServer
-from distkeras.parameter_servers import DeltaParameterServer
-from distkeras.parameter_servers import DynSGDParameterServer
-from distkeras.parameter_servers import ExperimentalParameterServer
+from kerasonspark.parameter_servers import ADAGParameterServer
+from kerasonspark.parameter_servers import DeltaParameterServer
+from kerasonspark.parameter_servers import DynSGDParameterServer
+from kerasonspark.parameter_servers import ExperimentalParameterServer
 
-from distkeras.utils import deserialize_keras_model
-from distkeras.utils import history_executor
-from distkeras.utils import history_executors_average
-from distkeras.utils import pickle_object
-from distkeras.utils import serialize_keras_model
-from distkeras.utils import set_keras_base_directory
-from distkeras.utils import unpickle_object
+from kerasonspark.utils import deserialize_keras_model
+from kerasonspark.utils import history_executor
+from kerasonspark.utils import history_executors_average
+from kerasonspark.utils import pickle_object
+from kerasonspark.utils import serialize_keras_model
+from kerasonspark.utils import set_keras_base_directory
+from kerasonspark.utils import unpickle_object
 
-from distkeras.networking import determine_host_address
+from kerasonspark.networking import determine_host_address
 
-from distkeras.workers import ADAGWorker
-from distkeras.workers import AEASGDWorker
-from distkeras.workers import DOWNPOURWorker
-from distkeras.workers import DynSGDWorker
-from distkeras.workers import ExperimentalWorker
-from distkeras.workers import EAMSGDWorker
-from distkeras.workers import SequentialWorker
+from kerasonspark.workers import ADAGWorker
+from kerasonspark.workers import AEASGDWorker
+from kerasonspark.workers import DOWNPOURWorker
+from kerasonspark.workers import DynSGDWorker
+from kerasonspark.workers import ExperimentalWorker
+from kerasonspark.workers import EAMSGDWorker
+from kerasonspark.workers import SequentialWorker
 
 from keras import backend as K
 
@@ -159,7 +159,7 @@ class SingleTrainer(Trainer):
         return worker
 
     def train(self, dataframe, shuffle=False):
-        """See distkeras.trainers.Trainer.train
+        """See kerasonspark.trainers.Trainer.train
 
         # Arguments
             dataframe: dataframe. A Spark Dataframe containing the training data.

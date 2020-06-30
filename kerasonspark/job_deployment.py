@@ -5,11 +5,11 @@ Hadoop / Spark clusters."""
 
 ## BEGIN Imports. ##############################################################
 
-from distkeras.utils import deserialize_keras_model
-from distkeras.utils import get_os_username
-from distkeras.utils import pickle_object
-from distkeras.utils import serialize_keras_model
-from distkeras.utils import unpickle_object
+from kerasonspark.utils import deserialize_keras_model
+from kerasonspark.utils import get_os_username
+from kerasonspark.utils import pickle_object
+from kerasonspark.utils import serialize_keras_model
+from kerasonspark.utils import unpickle_object
 
 from flask import Flask
 from flask import request
@@ -217,12 +217,12 @@ class PunchcardJob(object):
 
     def generate_code(self):
         source = """
-from distkeras.evaluators import *
-from distkeras.predictors import *
-from distkeras.trainers import *
-from distkeras.trainers import *
-from distkeras.transformers import *
-from distkeras.utils import *
+from kerasonspark.evaluators import *
+from kerasonspark.predictors import *
+from kerasonspark.trainers import *
+from kerasonspark.trainers import *
+from kerasonspark.transformers import *
+from kerasonspark.utils import *
 from keras import *
 from pyspark import SparkConf
 from pyspark import SparkContext

@@ -6,9 +6,9 @@ import numpy as np
 
 from pyspark.mllib.linalg import DenseVector
 
-from distkeras.utils import serialize_keras_model
-from distkeras.utils import deserialize_keras_model
-from distkeras.utils import new_dataframe_row
+from kerasonspark.utils import serialize_keras_model
+from kerasonspark.utils import deserialize_keras_model
+from kerasonspark.utils import new_dataframe_row
 
 ## END Imports. ################################################################
 

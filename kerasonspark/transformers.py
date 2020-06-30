@@ -9,8 +9,8 @@ a column to a dataframe based on a collection of specified values.
 
 import numpy as np
 
-from distkeras.utils import new_dataframe_row
-from distkeras.utils import to_one_hot_encoded_dense
+from kerasonspark.utils import new_dataframe_row
+from kerasonspark.utils import to_one_hot_encoded_dense
 
 from pyspark.mllib.linalg import DenseMatrix
 from pyspark.mllib.linalg import DenseVector

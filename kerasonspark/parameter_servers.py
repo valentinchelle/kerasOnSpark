@@ -17,9 +17,9 @@ import socket
 
 import threading
 
-from distkeras.networking import recv_data
-from distkeras.networking import send_data
-from distkeras.utils import deserialize_keras_model
+from kerasonspark.networking import recv_data
+from kerasonspark.networking import send_data
+from kerasonspark.utils import deserialize_keras_model
 
 ## END Imports. ################################################################
 
@@ -29,7 +29,7 @@ class ParameterServer(object):
 
     # Arguments
         model: string. Serialized Keras model.
-               See: distkeras.utils.serialize_keras_model
+               See: kerasonspark.utils.serialize_keras_model
     """
 
     def __init__(self, model):
@@ -78,11 +78,11 @@ class SocketParameterServer(ParameterServer):
     This means that this parameter server accepts multiple TCP connections from multiple
     workers, and uses a costum protocol to transmit and receive the model parameters. This
     is done by implementing a custom protocol. Which is fully described in the
-    distkeras.networking module.
+    kerasonspark.networking module.
 
     # Arguments
         model: string. Serialized Keras model.
-               See: distkeras.utils.serialize_keras_model
+               See: kerasonspark.utils.serialize_keras_model
         port: int. Listing port number.
     """
 
@@ -221,7 +221,7 @@ class DeltaParameterServer(SocketParameterServer):
 
     # Arguments
         model: string. Serialized Keras model.
-               See: distkeras.utils.serialize_keras_model
+               See: kerasonspark.utils.serialize_keras_model
         master_port: int. Port number of the parameter server.
     """
 
@@ -265,7 +265,7 @@ class ADAGParameterServer(SocketParameterServer):
 
     # Arguments
         model: string. Keras model.
-               See: distkeras.utils.serialize_keras_model
+               See: kerasonspark.utils.serialize_keras_model
         master_port: int. Port number of the parameter server.
     """
 
@@ -309,7 +309,7 @@ class DynSGDParameterServer(SocketParameterServer):
 
     # Arguments
         model: string. Keras model
-               See: distkeras.utils.serialize_keras_model
+               See: kerasonspark.utils.serialize_keras_model
         master_port: int. Port number of the parameter server.
     """
 
@@ -360,7 +360,7 @@ class ExperimentalParameterServer(SocketParameterServer):
 
     # Arguments
         model: string. Keras model.
-               See: distkeras.utils.serialize_keras_model
+               See: kerasonspark.utils.serialize_keras_model
         master_port: int. Port number of the parameter server.
     """
 

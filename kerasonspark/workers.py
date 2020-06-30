@@ -6,15 +6,15 @@ algorithms.
 
 ## BEGIN Imports. ##############################################################
 
-from distkeras.networking import connect
-from distkeras.networking import recv_data
-from distkeras.networking import send_data
+from kerasonspark.networking import connect
+from kerasonspark.networking import recv_data
+from kerasonspark.networking import send_data
 
-from distkeras.utils import deserialize_keras_model
-from distkeras.utils import serialize_keras_model
-from distkeras.utils import set_keras_base_directory
-from distkeras.utils import shuffle
-from distkeras.utils import uniform_weights
+from kerasonspark.utils import deserialize_keras_model
+from kerasonspark.utils import serialize_keras_model
+from kerasonspark.utils import set_keras_base_directory
+from kerasonspark.utils import shuffle
+from kerasonspark.utils import uniform_weights
 
 from keras.optimizers import Optimizer, serialize, deserialize
 import keras.backend as K
